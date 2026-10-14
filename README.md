@@ -51,7 +51,7 @@ No deployment workflow is included or enabled during private review. The `privat
 
 ## Content provenance and scientific scope
 
-The paper, authors, affiliations, and experimental results are taken from the supplied `ICLR_2027__Equilibrium_Energy_Control (1).zip`. The manuscript was compiled without editing its source. No conference acceptance, arXiv identifier, or DOI is assumed. Update the preprint citation and resource links when official identifiers are available.
+The paper, authors, affiliations, and experimental results are taken from the supplied `ICLR_2027__Equilibrium_Energy_Control (1).zip`. The manuscript was compiled without editing its source. All paper links point to the author-provided arXiv version at https://arxiv.org/abs/2610.18790v1 . Its title and author list were verified against the arXiv page. The bundled PDF remains available in the repository. No conference acceptance is assumed.
 
 - Benchmark success: G0.5 versus G0.5 + EqC, 20 trials per task. Sweeping: 65 → 100%; flower insertion: 45 → 80%; towel folding: 80 → 95%. The displayed rollouts are illustrative EqC examples, not baseline comparisons.
 - Lifelong learning: three independent runs, 20 trials per checkpoint per run. Final EqC means: 96.7% for blocks and 98.3% for garment folding. Curves show means; the paper contains variability details.
