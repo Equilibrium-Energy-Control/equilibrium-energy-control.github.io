@@ -1,0 +1,11 @@
+{
+  "name": "eqc-research-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "check": "node --check app.js && node --check scripts/serve.mjs && node scripts/check.mjs"
+  }
+}

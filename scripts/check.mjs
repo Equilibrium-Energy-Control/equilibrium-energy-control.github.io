@@ -1,0 +1,9 @@
+import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
+const root=path.resolve('.'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');let count=0;
+for(const m of html.matchAll(/(?:src|href|poster)="([^"]+)"/g)){const u=m[1];if(/^(https?:|mailto:|data:)/.test(u))continue;if(u.startsWith('#')){assert(html.includes(`id="${u.slice(1)}"`),`Missing anchor ${u}`);continue}const p=path.join(root,u.split('#')[0]);assert(fs.existsSync(p),`Missing file ${u}`);count++}
+for(const n of ['hero','sweeping','flower','towel','block-recovery','garment-recovery','astra-recovery','astra-learned','cups'])for(const p of [`assets/video/${n}.mp4`,`assets/posters/${n}.jpg`])assert(fs.existsSync(path.join(root,p)),p);
+let segments=0;for(const name of ['explainer','demo']){const d=path.join(root,'assets/video',name);for(const line of fs.readFileSync(path.join(d,'index.m3u8'),'utf8').split('\n').filter(l=>l&&!l.startsWith('#'))){assert(fs.existsSync(path.join(d,line)),line);segments++}}
+assert(!/[\u4e00-\u9fff]/.test(html),'Non-English website copy');assert(!html.includes('arXiv:')&&!html.includes('ICLR 2027'),'Unverified publication identifiers');assert(html.includes('Run 1, Round 5'),'Transfer scope missing');
+const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length,'Duplicate IDs');
+function files(d){return fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?files(path.join(d,e.name)):[path.join(d,e.name)])}const assets=[...files(path.join(root,'assets')),...['index.html','styles.css','app.js'].map(p=>path.join(root,p))];assert(assets.every(p=>fs.statSync(p).size<25*1024*1024),'Static asset too large');
+console.log(JSON.stringify({localReferences:count,uniqueIds:ids.length,hlsSegments:segments,files:assets.length,totalBytes:assets.reduce((a,p)=>a+fs.statSync(p).size,0),passed:true},null,2));
