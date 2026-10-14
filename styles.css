@@ -7,3 +7,42 @@
 /* Keep intrinsic video dimensions from widening responsive grid tracks. */
 .hero-copy,.hero-visual,.benchmark-media,.benchmark-stats,.agent-media,.agent-copy,.chart-wrap,.detection-copy,.transfer-grid>*,.learning-copy{min-width:0}
 @media(max-width:580px){.hero h1{font-size:clamp(43px,12.3vw,59px);letter-spacing:-1.8px}.hero h1>span{font-size:26px}.loop-strip{gap:14px}.loop-strip svg{width:38px}}
+
+/* Centered paper title and readable author credits. */
+.hero.hero-centered{display:block;text-align:center;padding-top:76px;padding-bottom:48px}
+.hero-centered .hero-copy{max-width:1160px;margin:0 auto}
+.hero-centered .eyebrow{justify-content:center;align-items:center;font-size:10px;letter-spacing:.14em;white-space:normal}
+.hero-centered h1{font-size:clamp(42px,6.2vw,76px);line-height:1.08;letter-spacing:-2.5px;margin-top:28px;text-wrap:balance}
+.hero-centered h1>span{max-width:960px;margin:18px auto 0;font-size:clamp(25px,3.1vw,38px);line-height:1.25;letter-spacing:-.8px;text-wrap:balance}
+.hero-centered .hero-description{max-width:650px;margin:25px auto 0;font-size:17px;line-height:1.75;text-wrap:balance}
+.hero-centered .hero-actions{justify-content:center;align-items:center;flex-direction:row;gap:24px;margin-top:28px}
+.hero-centered .hero-footnote{font-size:11px;margin-top:23px}
+.authors{padding-top:32px;padding-bottom:32px}
+.authors .author-list{max-width:1160px;font-size:20px;font-weight:500;line-height:1.65;column-gap:28px;row-gap:12px;color:var(--ink)}
+.author-list>span{white-space:nowrap}
+.authors .affiliations{font-size:15px;gap:12px 30px;flex-wrap:wrap;margin-top:24px;color:#53625a}
+.authors .contributions{font-size:12px;line-height:1.8;margin-top:15px;color:var(--muted)}
+@media(max-width:800px){
+ .hero.hero-centered{padding-top:52px;padding-bottom:36px}
+ .hero-centered h1{letter-spacing:-1.7px}
+ .hero-centered .hero-description{font-size:16px;max-width:570px}
+ .hero-centered .hero-actions .button{font-size:12px;min-height:46px}
+ .authors .author-list{font-size:18px;column-gap:23px;row-gap:11px}
+ .authors .affiliations{font-size:14px;gap:8px 23px}
+ .authors .contributions{font-size:11px}
+}
+@media(max-width:580px){
+ .hero.hero-centered{padding-top:42px;padding-bottom:32px}
+ .hero-centered .eyebrow{font-size:8px;letter-spacing:.09em}
+ .hero-centered h1{font-size:clamp(36px,10vw,52px);letter-spacing:-1.5px;margin-top:24px}
+ .hero-centered h1>span{font-size:25px;line-height:1.3;letter-spacing:-.4px;margin-top:16px}
+ .hero-centered .hero-description{font-size:15px;margin-top:22px}
+ .hero-centered .hero-actions{gap:10px 20px;margin-top:24px}
+ .hero-centered .hero-footnote{font-size:9px;margin-top:18px}
+ .authors .author-list{font-size:17px;column-gap:20px;row-gap:12px}
+ .authors .affiliations{font-size:13px;gap:6px 19px;margin-top:22px}
+ .authors .contributions{font-size:11px}
+}
+
+.author-list a{transition:color .2s;text-underline-offset:4px}
+.author-list a:hover,.author-list a:focus-visible{color:var(--blue);text-decoration:underline}
