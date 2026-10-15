@@ -67,3 +67,37 @@
 .hero-centered .code-coming-soon{gap:7px;color:var(--muted)}
 .hero-centered .code-coming-soon:hover{transform:none}
 .hero-centered .code-coming-soon span{font-size:13px;font-weight:400}
+
+.paper-introduction{padding-top:64px}
+.paper-introduction .paper-figure{max-width:1080px;margin:0 auto}
+.paper-introduction .paper-figure img{max-height:480px}
+.abstract-visible{max-width:960px;margin:56px auto 0}
+.abstract-visible h2{font-size:36px;letter-spacing:-.8px;margin-bottom:24px;text-align:center}
+.abstract-visible p{font-size:16px;line-height:1.9;color:var(--ink)}
+.paper-introduction .film-banner{margin-top:48px}
+@media(max-width:580px){.paper-introduction{padding-top:36px}.abstract-visible{margin-top:36px}.abstract-visible h2{font-size:30px;margin-bottom:20px}.abstract-visible p{font-size:14px;line-height:1.85}.paper-introduction .film-banner{margin-top:32px}}
+
+.hero-actions .resource-icon{width:21px;height:21px;flex:none}
+
+/* Blend the teaser white canvas into the page background. */
+.paper-introduction .paper-figure{background:var(--paper)}
+.paper-introduction .paper-figure img{mix-blend-mode:multiply}
+
+/* A quiet closing statement, with a rising path echoing continued learning. */
+.closing-panel{position:relative;isolation:isolate;overflow:hidden;text-align:center;background:var(--paper);color:var(--ink);border-radius:0;padding:66px 30px 160px;margin-bottom:56px}
+.closing-mark{display:flex;justify-content:center;gap:7px;margin-bottom:30px}
+.closing-mark i{width:20px;height:4px;background:#4285f4}
+.closing-mark i:nth-child(2){background:#ea5947}
+.closing-mark i:nth-child(3){background:#f3c346}
+.closing-mark i:nth-child(4){background:#409a69}
+.resources .closing-statement{font-size:clamp(36px,4.8vw,64px);line-height:1.13;letter-spacing:-1.7px;font-weight:400}
+.closing-statement>span{display:block}
+.closing-statement .closing-lead{font-size:.53em;letter-spacing:-.4px;color:var(--muted);margin-bottom:12px}
+.closing-emphasis{color:var(--ink)}
+.closing-subtitle{font-size:17px;line-height:1.6;color:var(--muted);margin-top:26px}
+.closing-path{position:absolute;left:0;bottom:0;width:100%;height:120px;z-index:-1}
+.path-guide{stroke:#87988e;stroke-opacity:.18;stroke-width:1}
+.path-growth{stroke:#87988e;stroke-opacity:.45;stroke-width:1.5}
+@media(max-width:580px){.closing-panel{padding:42px 20px 120px;margin-bottom:36px}.resources .closing-statement{font-size:38px;letter-spacing:-1px}.closing-statement .closing-lead{font-size:22px;line-height:1.4}.closing-subtitle{font-size:14px;max-width:240px;margin:22px auto 0}.closing-path{height:90px}.closing-mark{margin-bottom:24px}}
+
+.closing-panel>.section-number{position:absolute;top:0;left:0;margin:0;text-align:left}
