@@ -49,15 +49,16 @@
 .author-list a:hover,.author-list a:focus-visible{color:var(--blue);text-decoration:underline}
 
 /* Institution marks follow the affiliation numbering in the author list. */
-.authors .affiliation-logos{margin-top:30px;gap:28px 48px;font-size:20px;font-weight:400;color:var(--muted)}
-.affiliation-logos .affiliation{display:flex;align-items:center;gap:14px;white-space:nowrap}
-.affiliation-logos .affiliation>sup{align-self:flex-start;margin:10px -4px 0 0;font-size:13px;line-height:1}
+.authors .affiliation-logos{margin-top:30px;gap:28px 72px;font-weight:400;color:var(--muted)}
+.affiliation-logos .affiliation{display:flex;align-items:center;gap:12px;white-space:nowrap;min-height:80px}
+.affiliation-logos .affiliation>sup{align-self:flex-start;margin:10px 0 0;font-size:13px;line-height:1}
 .affiliation-logos .institution-logo{object-fit:contain;flex:none}
 .affiliation-logos .tsinghua-logo{width:80px;height:80px}
-.affiliation-logos .galaxea-logo{width:190px;height:58px}
+/* Show only the upper English wordmark, retaining the original logo pixels. */
+.affiliation-logos .galaxea-logo{width:190px;height:26px;object-fit:cover;object-position:center top}
 .affiliation-logos .princeton-logo{width:62px;height:80px}
-@media(max-width:1100px){.authors .affiliation-logos{gap:24px 30px;font-size:17px}.affiliation-logos .affiliation{gap:10px}.affiliation-logos .tsinghua-logo{width:64px;height:64px}.affiliation-logos .galaxea-logo{width:155px;height:48px}.affiliation-logos .princeton-logo{width:50px;height:64px}}
-@media(max-width:580px){.authors .affiliation-logos{flex-direction:column;align-items:center;gap:22px;font-size:17px;margin-top:28px}.affiliation-logos .affiliation{min-height:64px}.authors .contributions{margin-top:24px}}
+@media(max-width:1100px){.authors .affiliation-logos{gap:24px 48px}.affiliation-logos .affiliation{gap:10px;min-height:64px}.affiliation-logos .tsinghua-logo{width:64px;height:64px}.affiliation-logos .galaxea-logo{width:155px;height:21px}.affiliation-logos .princeton-logo{width:50px;height:64px}}
+@media(max-width:580px){.authors .affiliation-logos{flex-direction:row;align-items:center;gap:18px 12px;margin-top:28px}.affiliation-logos .affiliation{gap:7px;min-height:48px}.affiliation-logos .affiliation>sup{font-size:11px;margin-top:5px}.affiliation-logos .tsinghua-logo{width:48px;height:48px}.affiliation-logos .galaxea-logo{width:120px;height:17px}.affiliation-logos .princeton-logo{width:38px;height:48px}.authors .contributions{margin-top:24px}}
 
 .authors .contributions{display:flex;justify-content:center;flex-wrap:wrap;column-gap:32px;row-gap:8px}
 .authors .contributions>span{white-space:nowrap}
