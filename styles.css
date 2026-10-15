@@ -46,3 +46,24 @@
 
 .author-list a{transition:color .2s;text-underline-offset:4px}
 .author-list a:hover,.author-list a:focus-visible{color:var(--blue);text-decoration:underline}
+
+/* Institution marks follow the affiliation numbering in the author list. */
+.authors .affiliation-logos{margin-top:30px;gap:28px 48px;font-size:20px;font-weight:400;color:var(--muted)}
+.affiliation-logos .affiliation{display:flex;align-items:center;gap:14px;white-space:nowrap}
+.affiliation-logos .affiliation>sup{align-self:flex-start;margin:10px -4px 0 0;font-size:13px;line-height:1}
+.affiliation-logos .institution-logo{object-fit:contain;flex:none}
+.affiliation-logos .tsinghua-logo{width:80px;height:80px}
+.affiliation-logos .galaxea-logo{width:190px;height:58px}
+.affiliation-logos .princeton-logo{width:62px;height:80px}
+@media(max-width:1100px){.authors .affiliation-logos{gap:24px 30px;font-size:17px}.affiliation-logos .affiliation{gap:10px}.affiliation-logos .tsinghua-logo{width:64px;height:64px}.affiliation-logos .galaxea-logo{width:155px;height:48px}.affiliation-logos .princeton-logo{width:50px;height:64px}}
+@media(max-width:580px){.authors .affiliation-logos{flex-direction:column;align-items:center;gap:22px;font-size:17px;margin-top:28px}.affiliation-logos .affiliation{min-height:64px}.authors .contributions{margin-top:24px}}
+
+.authors .contributions{display:flex;justify-content:center;flex-wrap:wrap;column-gap:32px;row-gap:8px}
+.authors .contributions>span{white-space:nowrap}
+
+.hero.hero-centered h1{margin-top:0}
+.hero-centered .hero-actions{column-gap:28px;row-gap:12px}
+.hero-centered .hero-actions .button{font-size:16px}
+.hero-centered .code-coming-soon{gap:7px;color:var(--muted)}
+.hero-centered .code-coming-soon:hover{transform:none}
+.hero-centered .code-coming-soon span{font-size:13px;font-weight:400}
