@@ -53,7 +53,7 @@ No deployment workflow is included or enabled during private review. The `privat
 
 The paper, authors, affiliations, and experimental results are taken from the supplied manuscript source archive. The manuscript was compiled without editing its source. All paper links point to the author-provided arXiv version at https://arxiv.org/pdf/2610.18790v1 . Its title and author list were verified against the arXiv page. The bundled PDF remains available in the repository.
 
-- Benchmark success: G0.5 versus G0.5 + EqC, 20 trials per task. Sweeping: 65 → 100%; flower insertion: 45 → 80%; towel folding: 80 → 95%. The displayed rollouts are illustrative EqC examples, not baseline comparisons.
+- Benchmark success: the original Galaxea G0.5 policy versus its EqC-adapted counterpart, 20 trials per task and policy. Sweeping: 65 → 100%; flower insertion: 45 → 80%; towel folding: 80 → 95%. The displayed rollouts are illustrative EqC examples, not baseline comparisons.
 - Lifelong learning: three independent runs, 20 trials per checkpoint per run. Final EqC means: 96.7% for blocks and 98.3% for garment folding. Curves show means; the paper contains variability details.
 - Astra: a separate proof of concept, using the same 18 seed demonstrations plus six agent recoveries, with 20/20 subsequent autonomous evaluations. Full automation is qualified by initialization and expert preparation.
 - Cross-task adaptation: the sequential study initialized from Block Stacking Run 1, Round 5. Both tasks reach 100% in the reported Round 2 evaluation; this is not a three-run aggregate.
