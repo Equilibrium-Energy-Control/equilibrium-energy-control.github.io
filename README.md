@@ -1,13 +1,11 @@
-![EqC teaser](assets/figures/overview.png)
-
-# EqC research website
-
-Project website for **EqC: Equilibrium Energy Control for Introspective Lifelong Robot Learning**.
+<h1 align="center">EqC: Equilibrium Energy Control for Introspective Lifelong Robot Learning</h1>
 
 <p align="center">
   <a href="https://arxiv.org/abs/2610.18790"><img src="https://img.shields.io/badge/arXiv-2610.18790-b31b1b?style=flat-square" alt="arXiv: 2610.18790"></a>
   <a href="https://equilibrium-energy-control.github.io/"><img src="https://img.shields.io/badge/Project-Web%20Page-2d865b?style=flat-square" alt="Project Web Page"></a>
 </p>
+
+![EqC teaser](assets/figures/overview.png)
 
 ## News
 
